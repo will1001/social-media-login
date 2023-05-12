@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import LinkedInProvider from "next-auth/providers/linkedin";
 import DiscordProvider from "next-auth/providers/discord";
-import SlackProvider from "next-auth/providers/slack";
+import GitHubProvider from "next-auth/providers/github";
 
 export const authOptions = {
   providers: [
@@ -30,14 +30,14 @@ export const authOptions = {
         ? process.env.NEXT_PUBLIC_DISCORD_CLIENT_SECRET
         : "",
     }),
-    SlackProvider({
-      clientId: process.env.NEXT_PUBLIC_DISCORD_CLIENT_SECRET
-      ? process.env.NEXT_PUBLIC_DISCORD_CLIENT_SECRET
-      : "",
-      clientSecret: process.env.NEXT_PUBLIC_DISCORD_CLIENT_SECRET
-      ? process.env.NEXT_PUBLIC_DISCORD_CLIENT_SECRET
-      : ""
-    })
+    GitHubProvider({
+      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID
+        ? process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID
+        : "",
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET
+        ? process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET
+        : "",
+    }),
   ],
   secret: process.env.NEXT_PUBLIC_NEXT_AUTH_SECRET,
 };
