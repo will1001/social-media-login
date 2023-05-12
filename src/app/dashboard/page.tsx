@@ -9,15 +9,15 @@ const Page = () => {
 
   const router = useRouter();
 
-  if (!session) {
-    router.push("/");
-  }
+  // if (!session) {
+  //   router.push("/");
+  // }
 
-  // useEffect(() => {
-  //   if (session) {
-  //     router.push("/");
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session]);
   return (
     <>
       <div>
