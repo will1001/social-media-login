@@ -9,30 +9,31 @@ const Page = () => {
 
   const router = useRouter();
 
-  // if (!session) {
-  //   router.push("/");
-  // }
-
   useEffect(() => {
-    if (session) {
+    if (!session) {
+      console.log(session);
       router.push("/");
     }
   }, [session]);
   return (
-    <>
-      <div>
-        {/* <img className="" src={session ? session?.user?.image : ""} /> */}
+    <div className="flex justify-center items-center h-[100vh]">
+      <div className="flex flex-col justify-center items-center text-xl">
+        <img
+          className="rounded-full"
+          src={session?.user?.image ? session?.user?.image : ""}
+        />
         <div>Hello,{session?.user?.name}</div>
         <div>Your email : {session?.user?.email}</div>
-        <button
+        <div
+          className="border border-black bg-white p-3 rounded-xl cursor-pointer"
           onClick={() => {
             signOut();
           }}
         >
           Sign Out
-        </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

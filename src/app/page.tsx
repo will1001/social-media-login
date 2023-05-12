@@ -26,19 +26,19 @@ export default function Home() {
             title="Sign up with Google"
           />
           <SignUpButton
-            onClick={() => signIn("twitter")}
-            icon="./twitter.svg"
-            title="Sign up with Twitter"
-          />
-          <SignUpButton
             onClick={() => signIn("linkedin")}
             icon="./linkedin.svg"
             title="Sign up with Linkedin"
           />
           <SignUpButton
-            onClick={() => signIn("Facebook")}
-            icon="./facebook.svg"
-            title="Sign up with Facebook"
+            onClick={() => signIn("discord")}
+            icon="./discord.svg"
+            title="Sign up with Discord"
+          />
+          <SignUpButton
+            onClick={() => signIn("slack")}
+            icon="./slack.svg"
+            title="Sign up with Slack"
           />
         </div>
       </div>
