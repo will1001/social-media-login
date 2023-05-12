@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const Home = () => {
+const Page = () => {
   const { data: session } = useSession();
 
   const router = useRouter();
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;
