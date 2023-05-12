@@ -36,9 +36,9 @@ export default function Home() {
             title="Sign up with Discord"
           />
           <SignUpButton
-            onClick={() => signIn("zoom")}
-            icon="./zoom.svg"
-            title="Sign up with Zoom"
+            onClick={() => signIn("gitlab")}
+            icon="./gitlab.svg"
+            title="Sign up with Gitlab"
           />
         </div>
       </div>
